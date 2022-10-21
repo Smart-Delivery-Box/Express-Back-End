@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/payment-methods/name/:firstName', (req, res) => {
+router.get('/payment-methods/first-name/:firstName', (req, res) => {
     customerQueries.findPaymentMethodsByFirstName(req.params.firstName, (err, data) => {
         if (err) throw err;
         else
@@ -18,7 +18,7 @@ router.get('/payment-methods/name/:firstName', (req, res) => {
     })
 })
 
-router.get('/payment-methods/number/:customerNumber', (req, res) => {
+router.get('/payment-methods/customer-number/:customerNumber', (req, res) => {
     customerQueries.findPaymentMethodsByCustomerNumber(req.params.customerNumber, (err, data) => {
         if (err) throw err;
         else
